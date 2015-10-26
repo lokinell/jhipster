@@ -1,10 +1,13 @@
 package com.triplane.config;
 
-import com.triplane.config.liquibase.AsyncSpringLiquibase;
 import com.codahale.metrics.MetricRegistry;
 import com.fasterxml.jackson.datatype.hibernate4.Hibernate4Module;
+import com.triplane.config.liquibase.AsyncSpringLiquibase;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
+import java.util.Arrays;
+import javax.inject.Inject;
+import javax.sql.DataSource;
 import liquibase.integration.spring.SpringLiquibase;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,16 +18,11 @@ import org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties;
 import org.springframework.context.ApplicationContextException;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
 import org.springframework.core.env.Environment;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.util.StringUtils;
-
-import javax.inject.Inject;
-import javax.sql.DataSource;
-import java.util.Arrays;
 
 @Configuration
 @EnableJpaRepositories("com.triplane.repository")

@@ -1,8 +1,7 @@
 package com.triplane.web.rest.dto;
 
-import org.joda.time.DateTime;
-
 import com.triplane.domain.User;
+import org.joda.time.DateTime;
 
 /**
  * A DTO extending the UserDTO, which is meant to be used in the user management UI.

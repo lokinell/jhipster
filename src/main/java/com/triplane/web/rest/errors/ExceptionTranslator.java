@@ -1,7 +1,6 @@
 package com.triplane.web.rest.errors;
 
 import java.util.List;
-
 import org.springframework.dao.ConcurrencyFailureException;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.AccessDeniedException;

@@ -3,14 +3,13 @@ package com.triplane.service;
 import com.triplane.config.audit.AuditEventConverter;
 import com.triplane.domain.PersistentAuditEvent;
 import com.triplane.repository.PersistenceAuditEventRepository;
+import java.util.List;
+import java.util.Optional;
+import javax.inject.Inject;
 import org.joda.time.LocalDateTime;
 import org.springframework.boot.actuate.audit.AuditEvent;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import javax.inject.Inject;
-import java.util.List;
-import java.util.Optional;
 
 /**
  * Service for managing audit events.

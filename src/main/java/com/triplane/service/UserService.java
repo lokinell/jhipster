@@ -1,13 +1,17 @@
 package com.triplane.service;
 
 import com.triplane.domain.Authority;
-import com.triplane.domain.PersistentToken;
 import com.triplane.domain.User;
 import com.triplane.repository.AuthorityRepository;
 import com.triplane.repository.PersistentTokenRepository;
 import com.triplane.repository.UserRepository;
 import com.triplane.security.SecurityUtils;
 import com.triplane.service.util.RandomUtil;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Optional;
+import java.util.Set;
+import javax.inject.Inject;
 import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
 import org.slf4j.Logger;
@@ -16,12 +20,6 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import javax.inject.Inject;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
 
 /**
  * Service class for managing users.

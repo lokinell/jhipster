@@ -1,9 +1,13 @@
 package com.triplane.security;
 
 import com.triplane.domain.PersistentToken;
-import com.triplane.domain.User;
 import com.triplane.repository.PersistentTokenRepository;
 import com.triplane.repository.UserRepository;
+import java.security.SecureRandom;
+import java.util.Arrays;
+import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import org.joda.time.LocalDate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,12 +23,6 @@ import org.springframework.security.web.authentication.rememberme.InvalidCookieE
 import org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import javax.inject.Inject;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.security.SecureRandom;
-import java.util.Arrays;
 
 /**
  * Custom implementation of Spring Security's RememberMeServices.

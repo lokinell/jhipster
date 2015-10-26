@@ -1,9 +1,7 @@
 package com.triplane.repository;
 
 import com.triplane.domain.Book;
-import org.springframework.data.jpa.repository.*;
-
-import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  * Spring Data JPA repository for the Book entity.

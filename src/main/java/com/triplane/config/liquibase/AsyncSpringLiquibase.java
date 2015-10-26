@@ -1,17 +1,15 @@
 package com.triplane.config.liquibase;
 
+import com.triplane.config.Constants;
 import javax.inject.Inject;
-
+import liquibase.exception.LiquibaseException;
+import liquibase.integration.spring.SpringLiquibase;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.env.Environment;
 import org.springframework.core.task.TaskExecutor;
 import org.springframework.util.StopWatch;
-
-import com.triplane.config.Constants;
-import liquibase.exception.LiquibaseException;
-import liquibase.integration.spring.SpringLiquibase;
 
 /**
  * Specific liquibase.integration.spring.SpringLiquibase that will update the database asynchronously.

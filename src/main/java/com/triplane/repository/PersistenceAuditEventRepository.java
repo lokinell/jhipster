@@ -1,10 +1,9 @@
 package com.triplane.repository;
 
 import com.triplane.domain.PersistentAuditEvent;
+import java.util.List;
 import org.joda.time.LocalDateTime;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.List;
 
 /**
  * Spring Data JPA repository for the PersistentAuditEvent entity.
