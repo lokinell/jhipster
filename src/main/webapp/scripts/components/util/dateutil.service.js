@@ -13,6 +13,7 @@ angular.module('jhipsterApp')
           return null;
         }
       };
+
       this.convertLocaleDateFromServer = function(date) {
         if (date) {
           var dateString = date.split("-");
@@ -20,6 +21,7 @@ angular.module('jhipsterApp')
         }
         return null;
       };
+      
       this.convertDateTimeFromServer = function(date) {
         if (date) {
           return new Date(date);   

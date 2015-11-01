@@ -6,6 +6,7 @@
             "home": "首页",
             "entities": {
                 "main": "数据",
+                "person": "Person",
                 "additionalEntity": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
